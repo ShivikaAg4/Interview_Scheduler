@@ -1,3 +1,9 @@
+Perfect 👍 Here’s your **final, corrected, and cleanly formatted README.md** — with proper markdown, emojis, and syntax highlighting so it renders beautifully on GitHub.
+You can copy this **exact version** into your repository’s `README.md` file.
+
+---
+
+````markdown
 # 🗓️ Interview Scheduler System
 
 ![React](https://img.shields.io/badge/Frontend-React-blue?style=flat-square&logo=react)
@@ -14,21 +20,21 @@ Built with **React** (frontend) and **Spring Boot** (backend), this project conn
 ## ✨ Features
 
 ### 👩‍💼 Candidate
-- Apply through a simple, responsive **form interface**
-- Upload **resume** → automatically parsed by an **ATS Scoring API**
+- Apply through a simple, responsive **form interface**  
+- Upload **resume** → automatically parsed by an **ATS Scoring API**  
 - Automatically **shortlisted** based on job description score threshold  
 
 ### 🧑‍💻 HR Panel
 - View **shortlisted candidates**  
-- **Manually schedule** interviews via a modal (date & time selector)
-- Send **SMS or Call notifications** when respective buttons are clicked (not auto-triggered)
-- View **scheduled slot details** after confirmation
+- **Manually schedule** interviews via a modal (date & time selector)  
+- Send **SMS or Call notifications** when respective buttons are clicked (not auto-triggered)  
+- View **scheduled slot details** after confirmation  
 - Once scheduled, the “Schedule” button disappears for that candidate  
 
 ### 👨‍💼 Admin Panel
-- Access complete candidate database (applied, shortlisted, rejected)
-- **Manually reject candidates**
-- View parsed resume info and ATS scores
+- Access complete candidate database (applied, shortlisted, rejected)  
+- **Manually reject candidates**  
+- View parsed resume info and ATS scores  
 
 ---
 
@@ -42,20 +48,26 @@ Backend --> MongoDB[(MongoDB Database)]
 Admin -->|View/Reject/Shortlist| Backend
 HR -->|View Shortlisted + Schedule Interview| Backend
 Backend -->|Trigger Notification| SMS_API[(Notification Service)]
+````
 
+---
 
-🏗️ Tech Stack
-Layer	Technology
-Frontend	React.js, React Router, CSS Modules
-Backend	Spring Boot (Java), RESTful APIs
-Database	MongoDB
-Queue & Notifications	RabbitMQ/Kafka (for retries), Twilio/Custom SMS API
-Integration	ATS Resume Parsing API
-Design	Matte finish, bluish-gray theme with glassmorphic U
+## 🏗️ Tech Stack
 
+| Layer                     | Technology                                           |
+| ------------------------- | ---------------------------------------------------- |
+| **Frontend**              | React.js, React Router, CSS Modules                  |
+| **Backend**               | Spring Boot (Java), RESTful APIs                     |
+| **Database**              | MongoDB                                              |
+| **Queue & Notifications** | RabbitMQ/Kafka (for retries), Twilio/Custom SMS API  |
+| **Integration**           | ATS Resume Parsing API                               |
+| **Design**                | Matte finish, bluish-gray theme with glassmorphic UI |
 
+---
 
-📁 Folder Structure
+## 📁 Folder Structure
+
+```
 InterviewScheduler/
 ├── backend/
 │   ├── src/
@@ -76,57 +88,91 @@ InterviewScheduler/
 │   └── package.json
 │
 └── README.md
+```
 
-⚙️ Setup & Installation
-🧱 Backend Setup
+---
+
+## ⚙️ Setup & Installation
+
+### 🧱 Backend Setup
+
+```bash
 git clone https://github.com/yourusername/interview-scheduler.git
 cd backend
 mvn clean install
 mvn spring-boot:run
+```
 
+Runs at:
+👉 **[http://localhost:8080](http://localhost:8080)**
 
-Runs at: http://localhost:8080
+---
 
-💻 Frontend Setup
+### 💻 Frontend Setup
+
+```bash
 cd ../frontend
 npm install
 npm start
+```
 
+Runs at:
+👉 **[http://localhost:3000](http://localhost:3000)**
 
-Runs at: http://localhost:3000
+---
 
-🔄 Workflow Overview
+## 🔄 Workflow Overview
 
-Candidate fills out the application form and uploads a resume
+1. **Candidate** fills out the application form and uploads a resume
+2. Backend sends resume → **ATS API** for parsing and scoring
+3. **Admin** reviews applications → rejects or approves
+4. **HR** views shortlisted candidates → schedules interviews manually via modal
+5. **SMS/Call notifications** are sent **only** when HR clicks respective buttons
 
-Backend sends resume → ATS API for parsing and scoring
+---
 
-Admin reviews applications → rejects or approves
+## 🧠 Key Highlights
 
-HR views shortlisted candidates → schedules interviews manually
+* ✅ Manual control over interview scheduling
+* ⚡ Real-time candidate status updates
+* 📨 SMS and Call notifications triggered **on-demand**
+* 🔒 Modular and scalable architecture
+* 🧩 Easy integration for JWT Auth and Calendar APIs
 
-SMS/Call notifications sent only when HR clicks buttons
+---
 
-🧠 Key Highlights
+## 🌟 Future Enhancements
 
-✅ Manual control over interview scheduling
+* 🔐 Add JWT authentication for all roles
+* 📧 Email notifications for interview confirmation
+* 📅 Google Calendar sync
+* 📊 Admin analytics dashboard
+* 💾 Cloud resume parsing via AWS Lambda
 
-⚡ Real-time candidate status updates
+---
 
-📨 SMS and Call notifications triggered on-demand
+## 👩‍💻 Author
 
-🔒 Modular and scalable architecture
+**Shivika Agarwal**
+🎓 3rd Year CSE Student @ KIIT University
+📍 Bahraich, Uttar Pradesh
+💼 Passionate about **Full Stack Development & AI**
+🔗 [LinkedIn](https://linkedin.com/in/yourprofile) | [GitHub](https://github.com/yourusername)
 
-🧩 Easy integration for JWT Auth and Calendar APIs
+---
 
-🌟 Future Enhancements
+## 🪪 License
 
-🔐 Add JWT authentication for all roles
+This project is licensed under the **MIT License** — feel free to use and modify it.
 
-📧 Email notifications for interview confirmation
+---
 
-📅 Google Calendar sync
+⭐ *If you like this project, give it a star!*
+Let’s make the interview process smoother, smarter, and simpler ✨
 
-📊 Admin analytics dashboard
+```
 
-💾 Cloud resume parsing via AWS Lambda
+---
+
+Would you like me to now add a **📘 API Endpoints Table** (for all main routes like `/api/candidates`, `/api/interviews`, `/api/notifications`, etc.) and a **`.env.example` section** at the end — so it looks fully developer-ready?
+```
