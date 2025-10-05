@@ -34,88 +34,72 @@ Built with **React** (frontend) and **Spring Boot** (backend), this project conn
 
 ## 🧩 System Architecture
 
-### 🏗️ Tech Stack
-Layer	Technology
-Frontend	React.js, React Router, CSS Modules
-Backend	Spring Boot (Java), RESTful APIs
-Database	MongoDB
-Queue & Notifications	RabbitMQ/Kafka (for retries), Twilio/Custom SMS API
-Integration	ATS Resume Parsing API
-Design	Matte finish, bluish-gray theme with glassmorphic UI
+---
 
+## 🏗️ Tech Stack
 
-📁 Folder Structure
+| Layer                 | Technology |
+|-----------------------|------------|
+| Frontend              | React.js, React Router, CSS Modules |
+| Backend               | Spring Boot (Java), RESTful APIs |
+| Database              | MongoDB |
+| Queue & Notifications | RabbitMQ/Kafka (for retries), Twilio/Custom SMS API |
+| Integration           | ATS Resume Parsing API |
+| Design                | Matte finish, bluish-gray theme with glassmorphic UI |
+
+---
+
+## 🎨 UI Highlights
+- 🩵 Sleek matte bluish-gray interface
+- 💠 Glassy and minimal card-based layout
+- 📅 Modal-based scheduling system
+- 📱 Fully responsive for desktop and mobile
+- 🌫️ Subtle gradients and visually pleasing alignment
+
+---
+
+## 📁 Folder Structure
+
 InterviewScheduler/
 ├── backend/
-│   ├── src/
-│   │   ├── main/java/com/interviewscheduler/
-│   │   │   ├── controller/
-│   │   │   ├── model/
-│   │   │   ├── service/
-│   │   │   └── repository/
-│   │   └── resources/
-│   └── pom.xml
+│ ├── src/
+│ │ ├── main/java/com/interviewscheduler/
+│ │ │ ├── controller/
+│ │ │ ├── model/
+│ │ │ ├── service/
+│ │ │ └── repository/
+│ │ └── resources/
+│ └── pom.xml
 │
 ├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── utils/
-│   │   └── App.js
-│   └── package.json
+│ ├── src/
+│ │ ├── components/
+│ │ ├── pages/
+│ │ ├── utils/
+│ │ └── App.js
+│ └── package.json
 │
 └── README.md
 
-### ⚙️ Setup & Installation
-🧱 Backend Setup
+yaml
+Copy code
+
+---
+
+## ⚙️ Setup & Installation
+
+### 🧱 Backend Setup
+```bash
 git clone https://github.com/yourusername/interview-scheduler.git
 cd backend
 mvn clean install
 mvn spring-boot:run
-
-
-Runs at: 👉 http://localhost:8080
+Runs at: http://localhost:8080
 
 💻 Frontend Setup
+bash
+Copy code
 cd ../frontend
 npm install
 npm start
-
-
-Runs at: 👉 http://localhost:3000
-
-🔄 Workflow Overview
-
-Candidate fills out the application form and uploads a resume.
-
-Backend sends resume → ATS API for parsing and scoring.
-
-Admin reviews applications → rejects or approves.
-
-HR views shortlisted candidates → schedules interviews manually via modal.
-
-SMS/Call notifications are sent only when HR clicks respective buttons.
-
-🧠 Key Highlights
-
-✅ Manual control over interview scheduling
-
-⚡ Real-time candidate status updates
-
-📨 On-demand SMS and Call notifications
-
-🔒 Modular and scalable architecture
-
-🧩 Ready for JWT Auth and Calendar API integration
-
-🌟 Future Enhancements
-
-🔐 Add JWT authentication for all roles
-
-📧 Email notifications for interview confirmation
-
-📅 Google Calendar sync for scheduled interviews
-
-📊 Analytics dashboard for Admin
-
-💾 Cloud resume parsing via AWS Lambda
+Runs at: http://localhost:3000
