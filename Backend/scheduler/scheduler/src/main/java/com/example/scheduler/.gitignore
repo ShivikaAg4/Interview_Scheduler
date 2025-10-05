@@ -1,0 +1,14 @@
+# Ignore sensitive files
+src/main/resources/application.properties
+
+# Maven/Gradle
+/target/
+.idea/
+*.iml
+
+# Logs
+*.log
+
+# OS junk
+.DS_Store
+Thumbs.db
