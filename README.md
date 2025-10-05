@@ -120,11 +120,11 @@ Runs at: http://localhost:3000
 
 ### Workflow Overview
 
--Candidate fills out the application form and uploads a resume
--Backend sends resume → ATS API for parsing and scoring
--Admin reviews applications → rejects or approves
--HR views shortlisted candidates → schedules interviews manually
--SMS/Call notifications sent only when HR clicks buttons
+- Candidate fills out the application form and uploads a resume
+- Backend sends resume → ATS API for parsing and scoring
+- Admin reviews applications → rejects or approves
+- HR views shortlisted candidates → schedules interviews manually
+- SMS/Call notifications sent only when HR clicks buttons
 
 ---
 
