@@ -42,7 +42,7 @@ Backend --> MongoDB[(MongoDB Database)]
 Admin -->|View/Reject/Shortlist| Backend
 HR -->|View Shortlisted + Schedule Interview| Backend
 Backend -->|Trigger Notification| SMS_API[(Notification Service)]
-
+```
 
 🏗️ Tech Stack
 Layer	Technology
