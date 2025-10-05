@@ -90,3 +90,41 @@ InterviewScheduler/
 │   └── package.json
 │
 └── README.md
+```
+
+
+### ⚙️ Setup & Installation
+
+#### 🧱 Backend Setup
+
+```bash
+git clone https://github.com/yourusername/interview-scheduler.git
+cd backend
+mvn clean install
+mvn spring-boot:run
+```
+Runs at: http://localhost:8080
+
+--- 
+
+### Frontend Setup
+```bash
+cd ../frontend
+npm install
+npm start
+```
+
+Runs at: http://localhost:3000
+
+---
+
+### Workflow Overview
+
+-Candidate fills out the application form and uploads a resume
+-Backend sends resume → ATS API for parsing and scoring
+-Admin reviews applications → rejects or approves
+-HR views shortlisted candidates → schedules interviews manually
+-SMS/Call notifications sent only when HR clicks buttons
+
+---
+
