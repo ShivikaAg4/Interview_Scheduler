@@ -14,82 +14,81 @@ Built with **React** (frontend) and **Spring Boot** (backend), this project conn
 ## ✨ Features
 
 ### 👩‍💼 Candidate
-- Apply through a simple, responsive **form interface**  
-- Upload **resume** → automatically parsed by an **ATS Scoring API**  
+- Apply through a simple, responsive **form interface**
+- Upload **resume** → automatically parsed by an **ATS Scoring API**
 - Automatically **shortlisted** based on job description score threshold  
 
 ### 🧑‍💻 HR Panel
 - View **shortlisted candidates**  
-- **Manually schedule** interviews via a modal (date & time selector)  
-- Send **SMS or Call notifications** when respective buttons are clicked (not auto-triggered)  
-- View **scheduled slot details** after confirmation  
+- **Manually schedule** interviews via a modal (date & time selector)
+- Send **SMS or Call notifications** when respective buttons are clicked (not auto-triggered)
+- View **scheduled slot details** after confirmation
 - Once scheduled, the “Schedule” button disappears for that candidate  
 
 ### 👨‍💼 Admin Panel
-- Access complete candidate database (applied, shortlisted, rejected)  
-- **Manually reject candidates**  
-- View parsed resume info and ATS scores  
+- Access complete candidate database (applied, shortlisted, rejected)
+- **Manually reject candidates**
+- View parsed resume info and ATS scores
 
 ---
 
 ## 🧩 System Architecture
 
----
+```mermaid
+flowchart LR
+Candidate -->|Submits Form + Resume| Backend
+Backend -->|Parse Resume & Score| ATS_API[(ATS Scoring API)]
+Backend --> MongoDB[(MongoDB Database)]
+Admin -->|View/Reject/Shortlist| Backend
+HR -->|View Shortlisted + Schedule Interview| Backend
+Backend -->|Trigger Notification| SMS_API[(Notification Service)]
+🏗️ Tech Stack
+Layer	Technology
+Frontend	React.js, React Router, CSS Modules
+Backend	Spring Boot (Java), RESTful APIs
+Database	MongoDB
+Queue & Notifications	RabbitMQ/Kafka (for retries), Twilio/Custom SMS API
+Integration	ATS Resume Parsing API
+Design	Matte finish, bluish-gray theme with glassmorphic UI
 
-## 🏗️ Tech Stack
+🎨 UI Highlights
+🩵 Sleek matte bluish-gray interface
 
-| Layer                 | Technology |
-|-----------------------|------------|
-| Frontend              | React.js, React Router, CSS Modules |
-| Backend               | Spring Boot (Java), RESTful APIs |
-| Database              | MongoDB |
-| Queue & Notifications | RabbitMQ/Kafka (for retries), Twilio/Custom SMS API |
-| Integration           | ATS Resume Parsing API |
-| Design                | Matte finish, bluish-gray theme with glassmorphic UI |
+💠 Glassy and minimal card-based layout
 
----
+📅 Modal-based scheduling system
 
-## 🎨 UI Highlights
-- 🩵 Sleek matte bluish-gray interface
-- 💠 Glassy and minimal card-based layout
-- 📅 Modal-based scheduling system
-- 📱 Fully responsive for desktop and mobile
-- 🌫️ Subtle gradients and visually pleasing alignment
+📱 Fully responsive for desktop and mobile
 
----
+🌫️ Subtle gradients and visually pleasing alignment
 
-## 📁 Folder Structure
-
+📁 Folder Structure
+css
+Copy code
 InterviewScheduler/
 ├── backend/
-│ ├── src/
-│ │ ├── main/java/com/interviewscheduler/
-│ │ │ ├── controller/
-│ │ │ ├── model/
-│ │ │ ├── service/
-│ │ │ └── repository/
-│ │ └── resources/
-│ └── pom.xml
+│   ├── src/
+│   │   ├── main/java/com/interviewscheduler/
+│   │   │   ├── controller/
+│   │   │   ├── model/
+│   │   │   ├── service/
+│   │   │   └── repository/
+│   │   └── resources/
+│   └── pom.xml
 │
 ├── frontend/
-│ ├── src/
-│ │ ├── components/
-│ │ ├── pages/
-│ │ ├── utils/
-│ │ └── App.js
-│ └── package.json
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── utils/
+│   │   └── App.js
+│   └── package.json
 │
 └── README.md
-
-yaml
+⚙️ Setup & Installation
+🧱 Backend Setup
+bash
 Copy code
-
----
-
-## ⚙️ Setup & Installation
-
-### 🧱 Backend Setup
-```bash
 git clone https://github.com/yourusername/interview-scheduler.git
 cd backend
 mvn clean install
@@ -103,3 +102,203 @@ cd ../frontend
 npm install
 npm start
 Runs at: http://localhost:3000
+
+🔄 Workflow Overview
+Candidate fills out the application form and uploads a resume
+
+Backend sends resume → ATS API for parsing and scoring
+
+Admin reviews applications → rejects or approves
+
+HR views shortlisted candidates → schedules interviews manually
+
+SMS/Call notifications sent only when HR clicks buttons
+
+🧠 Key Highlights
+✅ Manual control over interview scheduling
+
+⚡ Real-time candidate status updates
+
+📨 SMS and Call notifications triggered on-demand
+
+🔒 Modular and scalable architecture
+
+🧩 Easy integration for JWT Auth and Calendar APIs
+
+🌟 Future Enhancements
+🔐 Add JWT authentication for all roles
+
+📧 Email notifications for interview confirmation
+
+📅 Google Calendar sync
+
+📊 Admin analytics dashboard
+
+💾 Cloud resume parsing via AWS Lambda
+
+👩‍💻 Author
+Shivika Agarwal
+3rd Year CSE Student, KIIT University
+📍 Bahraich, Uttar Pradesh
+💼 Passionate about Full Stack Development & AI
+
+pgsql
+Copy code
+
+This version is **all inside one code block**, ready to copy-paste directly into your README.md.  
+
+Do you want me to **also add placeholder sections for screenshots and demo GIFs** so it looks even more professional on GitHub?
+
+
+
+
+
+
+You said:
+where in one whole code block as ssson as i copy the tech satck section everything below it is coming a s one plain text
+
+
+ChatGPT said:
+Ah! I get exactly what you mean now — the problem is that your folder structure, code blocks, and tables are inside the same Markdown block, but GitHub interprets them incorrectly when mixed. To fix this, the entire README must be wrapped in one single Markdown block, and any inner code snippets (like bash commands, folder structure, or mermaid diagram) must use triple backticks with the proper language specified.
+
+Here’s a fully corrected version you can copy-paste as one whole block, everything inside it is proper Markdown:
+
+markdown
+Copy code
+# 🗓️ Interview Scheduler System
+
+![React](https://img.shields.io/badge/Frontend-React-blue?style=flat-square&logo=react)
+![Spring Boot](https://img.shields.io/badge/Backend-Spring%20Boot-green?style=flat-square&logo=springboot)
+![MongoDB](https://img.shields.io/badge/Database-MongoDB-brightgreen?style=flat-square&logo=mongodb)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Development-orange?style=flat-square)
+
+A **role-based interview management system** that streamlines candidate tracking, shortlisting, and interview scheduling across different departments.  
+Built with **React** (frontend) and **Spring Boot** (backend), this project connects **Candidates, HR, and Admins** through a clean, efficient workflow.
+
+---
+
+## ✨ Features
+
+### 👩‍💼 Candidate
+- Apply through a simple, responsive **form interface**
+- Upload **resume** → automatically parsed by an **ATS Scoring API**
+- Automatically **shortlisted** based on job description score threshold  
+
+### 🧑‍💻 HR Panel
+- View **shortlisted candidates**  
+- **Manually schedule** interviews via a modal (date & time selector)
+- Send **SMS or Call notifications** when respective buttons are clicked (not auto-triggered)
+- View **scheduled slot details** after confirmation
+- Once scheduled, the “Schedule” button disappears for that candidate  
+
+### 👨‍💼 Admin Panel
+- Access complete candidate database (applied, shortlisted, rejected)
+- **Manually reject candidates**
+- View parsed resume info and ATS scores
+
+---
+
+## 🧩 System Architecture
+
+```mermaid
+flowchart LR
+Candidate -->|Submits Form + Resume| Backend
+Backend -->|Parse Resume & Score| ATS_API[(ATS Scoring API)]
+Backend --> MongoDB[(MongoDB Database)]
+Admin -->|View/Reject/Shortlist| Backend
+HR -->|View Shortlisted + Schedule Interview| Backend
+Backend -->|Trigger Notification| SMS_API[(Notification Service)]
+🏗️ Tech Stack
+Layer	Technology
+Frontend	React.js, React Router, CSS Modules
+Backend	Spring Boot (Java), RESTful APIs
+Database	MongoDB
+Queue & Notifications	RabbitMQ/Kafka (for retries), Twilio/Custom SMS API
+Integration	ATS Resume Parsing API
+Design	Matte finish, bluish-gray theme with glassmorphic UI
+
+🎨 UI Highlights
+🩵 Sleek matte bluish-gray interface
+
+💠 Glassy and minimal card-based layout
+
+📅 Modal-based scheduling system
+
+📱 Fully responsive for desktop and mobile
+
+🌫️ Subtle gradients and visually pleasing alignment
+
+📁 Folder Structure
+text
+Copy code
+InterviewScheduler/
+├── backend/
+│   ├── src/
+│   │   ├── main/java/com/interviewscheduler/
+│   │   │   ├── controller/
+│   │   │   ├── model/
+│   │   │   ├── service/
+│   │   │   └── repository/
+│   │   └── resources/
+│   └── pom.xml
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── utils/
+│   │   └── App.js
+│   └── package.json
+│
+└── README.md
+⚙️ Setup & Installation
+🧱 Backend Setup
+bash
+Copy code
+git clone https://github.com/yourusername/interview-scheduler.git
+cd backend
+mvn clean install
+mvn spring-boot:run
+Runs at: http://localhost:8080
+
+💻 Frontend Setup
+bash
+Copy code
+cd ../frontend
+npm install
+npm start
+Runs at: http://localhost:3000
+
+🔄 Workflow Overview
+Candidate fills out the application form and uploads a resume
+
+Backend sends resume → ATS API for parsing and scoring
+
+Admin reviews applications → rejects or approves
+
+HR views shortlisted candidates → schedules interviews manually
+
+SMS/Call notifications sent only when HR clicks buttons
+
+🧠 Key Highlights
+✅ Manual control over interview scheduling
+
+⚡ Real-time candidate status updates
+
+📨 SMS and Call notifications triggered on-demand
+
+🔒 Modular and scalable architecture
+
+🧩 Easy integration for JWT Auth and Calendar APIs
+
+🌟 Future Enhancements
+🔐 Add JWT authentication for all roles
+
+📧 Email notifications for interview confirmation
+
+📅 Google Calendar sync
+
+📊 Admin analytics dashboard
+
+💾 Cloud resume parsing via AWS Lambda
