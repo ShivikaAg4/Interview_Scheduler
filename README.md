@@ -1,4 +1,3 @@
-
 # 🗓️ Interview Scheduler System
 
 ![React](https://img.shields.io/badge/Frontend-React-blue?style=flat-square&logo=react)
@@ -44,24 +43,16 @@ Admin -->|View/Reject/Shortlist| Backend
 HR -->|View Shortlisted + Schedule Interview| Backend
 Backend -->|Trigger Notification| SMS_API[(Notification Service)]
 
----
 
-## 🏗️ Tech Stack
-
-| Layer                     | Technology                                           |
-| ------------------------- | ---------------------------------------------------- |
-| **Frontend**              | React.js, React Router, CSS Modules                  |
-| **Backend**               | Spring Boot (Java), RESTful APIs                     |
-| **Database**              | MongoDB                                              |
-| **Queue & Notifications** | RabbitMQ/Kafka (for retries), Twilio/Custom SMS API  |
-| **Integration**           | ATS Resume Parsing API                               |
-| **Design**                | Matte finish, bluish-gray theme with glassmorphic UI |
-
----
-
-## 📁 Folder Structure
-
-```
+🏗️ Tech Stack
+Layer	Technology
+Frontend	React.js, React Router, CSS Modules
+Backend	Spring Boot (Java), RESTful APIs
+Database	MongoDB
+Queue & Notifications	RabbitMQ/Kafka (for retries), Twilio/Custom SMS API
+Integration	ATS Resume Parsing API
+Design	Matte finish, bluish-gray theme with glassmorphic UI
+📁 Folder Structure
 InterviewScheduler/
 ├── backend/
 │   ├── src/
@@ -82,68 +73,57 @@ InterviewScheduler/
 │   └── package.json
 │
 └── README.md
-```
 
----
-
-## ⚙️ Setup & Installation
-
-### 🧱 Backend Setup
-
-```bash
+⚙️ Setup & Installation
+🧱 Backend Setup
 git clone https://github.com/yourusername/interview-scheduler.git
 cd backend
 mvn clean install
 mvn spring-boot:run
-```
 
-Runs at:
-👉 **[http://localhost:8080](http://localhost:8080)**
 
----
+Runs at: 👉 http://localhost:8080
 
-### 💻 Frontend Setup
-
-```bash
+💻 Frontend Setup
 cd ../frontend
 npm install
 npm start
-```
-
-Runs at:
-👉 **[http://localhost:3000](http://localhost:3000)**
-
----
-
-## 🔄 Workflow Overview
-
-1. **Candidate** fills out the application form and uploads a resume
-2. Backend sends resume → **ATS API** for parsing and scoring
-3. **Admin** reviews applications → rejects or approves
-4. **HR** views shortlisted candidates → schedules interviews manually via modal
-5. **SMS/Call notifications** are sent **only** when HR clicks respective buttons
-
----
-
-## 🧠 Key Highlights
-
-* ✅ Manual control over interview scheduling
-* ⚡ Real-time candidate status updates
-* 📨 SMS and Call notifications triggered **on-demand**
-* 🔒 Modular and scalable architecture
-* 🧩 Easy integration for JWT Auth and Calendar APIs
-
----
-
-## 🌟 Future Enhancements
-
-* 🔐 Add JWT authentication for all roles
-* 📧 Email notifications for interview confirmation
-* 📅 Google Calendar sync
-* 📊 Admin analytics dashboard
-* 💾 Cloud resume parsing via AWS Lambda
-
----
 
 
-```
+Runs at: 👉 http://localhost:3000
+
+🔄 Workflow Overview
+
+Candidate fills out the application form and uploads a resume
+
+Backend sends resume → ATS API for parsing and scoring
+
+Admin reviews applications → rejects or approves
+
+HR views shortlisted candidates → schedules interviews manually via modal
+
+SMS/Call notifications are sent only when HR clicks respective buttons
+
+🧠 Key Highlights
+
+✅ Manual control over interview scheduling
+
+⚡ Real-time candidate status updates
+
+📨 SMS and Call notifications triggered on-demand
+
+🔒 Modular and scalable architecture
+
+🧩 Easy integration for JWT Auth and Calendar APIs
+
+🌟 Future Enhancements
+
+🔐 Add JWT authentication for all roles
+
+📧 Email notifications for interview confirmation
+
+📅 Google Calendar sync
+
+📊 Admin analytics dashboard
+
+💾 Cloud resume parsing via AWS Lambda
