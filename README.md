@@ -1,9 +1,4 @@
-Perfect 👍 Here’s your **final, corrected, and cleanly formatted README.md** — with proper markdown, emojis, and syntax highlighting so it renders beautifully on GitHub.
-You can copy this **exact version** into your repository’s `README.md` file.
 
----
-
-````markdown
 # 🗓️ Interview Scheduler System
 
 ![React](https://img.shields.io/badge/Frontend-React-blue?style=flat-square&logo=react)
@@ -48,7 +43,6 @@ Backend --> MongoDB[(MongoDB Database)]
 Admin -->|View/Reject/Shortlist| Backend
 HR -->|View Shortlisted + Schedule Interview| Backend
 Backend -->|Trigger Notification| SMS_API[(Notification Service)]
-````
 
 ---
 
@@ -151,28 +145,5 @@ Runs at:
 
 ---
 
-## 👩‍💻 Author
 
-**Shivika Agarwal**
-🎓 3rd Year CSE Student @ KIIT University
-📍 Bahraich, Uttar Pradesh
-💼 Passionate about **Full Stack Development & AI**
-🔗 [LinkedIn](https://linkedin.com/in/yourprofile) | [GitHub](https://github.com/yourusername)
-
----
-
-## 🪪 License
-
-This project is licensed under the **MIT License** — feel free to use and modify it.
-
----
-
-⭐ *If you like this project, give it a star!*
-Let’s make the interview process smoother, smarter, and simpler ✨
-
-```
-
----
-
-Would you like me to now add a **📘 API Endpoints Table** (for all main routes like `/api/candidates`, `/api/interviews`, `/api/notifications`, etc.) and a **`.env.example` section** at the end — so it looks fully developer-ready?
 ```
