@@ -34,15 +34,6 @@ Built with **React** (frontend) and **Spring Boot** (backend), this project conn
 
 ## 🧩 System Architecture
 
-```mermaid
-flowchart LR
-Candidate -->|Submits Form + Resume| Backend
-Backend -->|Parse Resume & Score| ATS_API[(ATS Scoring API)]
-Backend --> MongoDB[(MongoDB Database)]
-Admin -->|View/Reject/Shortlist| Backend
-HR -->|View Shortlisted + Schedule Interview| Backend
-Backend -->|Trigger Notification| SMS_API[(Notification Service)]
-```
 ### 🏗️ Tech Stack
 Layer	Technology
 Frontend	React.js, React Router, CSS Modules
@@ -53,8 +44,7 @@ Integration	ATS Resume Parsing API
 Design	Matte finish, bluish-gray theme with glassmorphic UI
 
 
-
-### 📁 Folder Structure
+📁 Folder Structure
 InterviewScheduler/
 ├── backend/
 │   ├── src/
@@ -84,8 +74,7 @@ mvn clean install
 mvn spring-boot:run
 
 
-### Runs at:
-👉 http://localhost:8080
+Runs at: 👉 http://localhost:8080
 
 💻 Frontend Setup
 cd ../frontend
@@ -93,32 +82,31 @@ npm install
 npm start
 
 
-Runs at:
-👉 http://localhost:3000
+Runs at: 👉 http://localhost:3000
 
-### 🔄 Workflow Overview
+🔄 Workflow Overview
 
-Candidate fills out the application form and uploads a resume
+Candidate fills out the application form and uploads a resume.
 
-Backend sends resume → ATS API for parsing and scoring
+Backend sends resume → ATS API for parsing and scoring.
 
-Admin reviews applications → rejects or approves
+Admin reviews applications → rejects or approves.
 
-HR views shortlisted candidates → schedules interviews manually via modal
+HR views shortlisted candidates → schedules interviews manually via modal.
 
-SMS/Call notifications are sent only when HR clicks respective buttons
+SMS/Call notifications are sent only when HR clicks respective buttons.
 
-### 🧠 Key Highlights
+🧠 Key Highlights
 
 ✅ Manual control over interview scheduling
 
 ⚡ Real-time candidate status updates
 
-📨 SMS and Call notifications triggered on-demand
+📨 On-demand SMS and Call notifications
 
 🔒 Modular and scalable architecture
 
-🧩 Easy integration for JWT Auth and Calendar APIs
+🧩 Ready for JWT Auth and Calendar API integration
 
 🌟 Future Enhancements
 
@@ -126,8 +114,8 @@ SMS/Call notifications are sent only when HR clicks respective buttons
 
 📧 Email notifications for interview confirmation
 
-📅 Google Calendar sync
+📅 Google Calendar sync for scheduled interviews
 
-📊 Admin analytics dashboard
+📊 Analytics dashboard for Admin
 
 💾 Cloud resume parsing via AWS Lambda
