@@ -43,8 +43,7 @@ Admin -->|View/Reject/Shortlist| Backend
 HR -->|View Shortlisted + Schedule Interview| Backend
 Backend -->|Trigger Notification| SMS_API[(Notification Service)]
 ```
-
-🏗️ Tech Stack
+### 🏗️ Tech Stack
 Layer	Technology
 Frontend	React.js, React Router, CSS Modules
 Backend	Spring Boot (Java), RESTful APIs
@@ -52,7 +51,10 @@ Database	MongoDB
 Queue & Notifications	RabbitMQ/Kafka (for retries), Twilio/Custom SMS API
 Integration	ATS Resume Parsing API
 Design	Matte finish, bluish-gray theme with glassmorphic UI
-📁 Folder Structure
+
+
+
+### 📁 Folder Structure
 InterviewScheduler/
 ├── backend/
 │   ├── src/
@@ -74,7 +76,7 @@ InterviewScheduler/
 │
 └── README.md
 
-⚙️ Setup & Installation
+### ⚙️ Setup & Installation
 🧱 Backend Setup
 git clone https://github.com/yourusername/interview-scheduler.git
 cd backend
@@ -82,7 +84,8 @@ mvn clean install
 mvn spring-boot:run
 
 
-Runs at: 👉 http://localhost:8080
+### Runs at:
+👉 http://localhost:8080
 
 💻 Frontend Setup
 cd ../frontend
@@ -90,9 +93,10 @@ npm install
 npm start
 
 
-Runs at: 👉 http://localhost:3000
+Runs at:
+👉 http://localhost:3000
 
-🔄 Workflow Overview
+### 🔄 Workflow Overview
 
 Candidate fills out the application form and uploads a resume
 
@@ -104,7 +108,7 @@ HR views shortlisted candidates → schedules interviews manually via modal
 
 SMS/Call notifications are sent only when HR clicks respective buttons
 
-🧠 Key Highlights
+### 🧠 Key Highlights
 
 ✅ Manual control over interview scheduling
 
