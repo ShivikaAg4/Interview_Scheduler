@@ -46,29 +46,30 @@ Backend -->|Trigger Notification| SMS_API[(Notification Service)]
 ```
 
 ### 🏗️ Tech Stack
- ```mermaid
-Layer	Technology
-Frontend	React.js, React Router, CSS Modules
-Backend	Spring Boot (Java), RESTful APIs
-Database	MongoDB
-Queue & Notifications	RabbitMQ/Kafka (for retries), Twilio/Custom SMS API
-Integration	ATS Resume Parsing API
-Design	Matte finish, bluish-gray theme with glassmorphic UI
 
-🎨 UI Highlights
-🩵 Sleek matte bluish-gray interface
+| Layer                 | Technology |
+|-----------------------|------------|
+| Frontend              | React.js, React Router, CSS Modules |
+| Backend               | Spring Boot (Java), RESTful APIs |
+| Database              | MongoDB |
+| Queue & Notifications | RabbitMQ/Kafka (for retries), Twilio/Custom SMS API |
+| Integration           | ATS Resume Parsing API |
+| Design                | Matte finish, bluish-gray theme with glassmorphic UI |
 
-💠 Glassy and minimal card-based layout
+---
 
-📅 Modal-based scheduling system
+### 🎨 UI Highlights
+- 🩵 Sleek matte bluish-gray interface
+- 💠 Glassy and minimal card-based layout
+- 📅 Modal-based scheduling system
+- 📱 Fully responsive for desktop and mobile
+- 🌫️ Subtle gradients and visually pleasing alignment
 
-📱 Fully responsive for desktop and mobile
+---
 
-🌫️ Subtle gradients and visually pleasing alignment
+### 📁 Folder Structure
 
-📁 Folder Structure
-css
-Copy code
+```text
 InterviewScheduler/
 ├── backend/
 │   ├── src/
@@ -89,54 +90,3 @@ InterviewScheduler/
 │   └── package.json
 │
 └── README.md
-⚙️ Setup & Installation
-🧱 Backend Setup
-bash
-Copy code
-git clone https://github.com/yourusername/interview-scheduler.git
-cd backend
-mvn clean install
-mvn spring-boot:run
-Runs at: http://localhost:8080
-
-💻 Frontend Setup
-bash
-Copy code
-cd ../frontend
-npm install
-npm start
-Runs at: http://localhost:3000
-
-🔄 Workflow Overview
-Candidate fills out the application form and uploads a resume
-
-Backend sends resume → ATS API for parsing and scoring
-
-Admin reviews applications → rejects or approves
-
-HR views shortlisted candidates → schedules interviews manually
-
-SMS/Call notifications sent only when HR clicks buttons
-
-🧠 Key Highlights
-✅ Manual control over interview scheduling
-
-⚡ Real-time candidate status updates
-
-📨 SMS and Call notifications triggered on-demand
-
-🔒 Modular and scalable architecture
-
-🧩 Easy integration for JWT Auth and Calendar APIs
-
-🌟 Future Enhancements
-🔐 Add JWT authentication for all roles
-
-📧 Email notifications for interview confirmation
-
-📅 Google Calendar sync
-
-📊 Admin analytics dashboard
-
-💾 Cloud resume parsing via AWS Lambda
-
